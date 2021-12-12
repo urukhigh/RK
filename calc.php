@@ -67,5 +67,6 @@
         <button id="btn1" onclick="plus();">+</button>
         <button id="btn2" onclick="minus();">-</button> <br />
         <input id="z" />
+        <br><a href="index_.html">Назад к порталу</a>
     </body>
 </html>
