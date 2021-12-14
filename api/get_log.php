@@ -10,15 +10,7 @@
     $user = $_SESSION["user"];
 
     include(getenv("MYAPP_CONFIG"));
-?>
-
-<html>
-    <head>
-        <title></title>
-    </head>
-    <body>
-        <?php
-           
+    
             $sql = "SELECT ID, Number1, Number2, Result, UserID 
             FROM log WHERE UserID='$user'";
             $conn = mysqli_connect($DB_URL,$DB_USER,$DB_PWD,$DB_NAME);
@@ -26,12 +18,10 @@
             // Противодействие sql injection.
             $statement = mysqli_prepare($conn,$sql);
             mysqli_stmt_execute($statement);
-            echo(mysqli_error($conn));
+            // echo(mysqli_error($conn));
             $cursor = mysqli_stmt_get_result($statement);
             $result = mysqli_fetch_all($cursor);
             //var_dump($result);
             mysqli_close($conn);
             echo(json_encode($result));
-        ?>
-    </body>
-</html>
+?>
