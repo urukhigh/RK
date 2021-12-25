@@ -6,7 +6,7 @@ $y = $_REQUEST["y"];
 $z = $x + $y;
 $user = $_SESSION["user"];
 
-include(getenv('/var/www/html/params.php'));
+include('/var/www/html/params.php');
 
 // $conn = mysqli_connect("localhost","root","","calc");
 $conn = mysqli_connect($DB_URL,$DB_USER,$DB_PWD,$DB_NAME);

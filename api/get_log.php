@@ -9,7 +9,7 @@
 
     $user = $_SESSION["user"];
 
-    include(getenv('/var/www/html/params.php'));
+    include('/var/www/html/params.php');
     
             $sql = "SELECT ID, Number1, Number2, Result, UserID 
             FROM log WHERE UserID='$user'";

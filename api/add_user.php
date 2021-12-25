@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include (getenv('/var/www/html/params.php'));
+    include ('/var/www/html/params.php');
 ?>
 <html>
     <head>
